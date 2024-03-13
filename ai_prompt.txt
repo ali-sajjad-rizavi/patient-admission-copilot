@@ -1,0 +1,226 @@
+Your objective is to analyze the patient’s medical record (which I've shown you in previous messages 'Patient Medical Record Text Content' heading) and produce various fields. Below are instructions on how to produce each field:
+
+
+  **diagnosis_summary** 
+
+  Produce a 1 sentence summary of the patient's medical situation. Call this “summary” Here are 3 examples of the tone, length of the summary:
+
+  77 year old male with decreased interaction, history of Alzheimer’s. Per behavior chat he can be confused, irritable and have some violence risk behaviors.
+
+  73 Year old With Dizzy  was admitted from 12. 27- 12.31 and DC’D home she quickly realized she could not be safe at home.
+
+  78 Year old with Abdominal wall abscess, skin wound from surgical wound.
+
+  **special_equipment**
+  Note any special equipment the patient requires. Make sure to specifically note whether the patient requires a bariatric bed, oxygen, PEG tube.
+
+  **psychiatric_status**
+  Note any psychiatric diagnosis the patient has. If there is no psychiatric diagnosis, leave it blank. 
+
+  **insurance**
+  Note the patient's insurance information. This will be listed as the primary insurance and secondary insurance.. 
+
+
+  **red_flags**
+
+  Category: Ventilator
+Keywords: Assisted Ventilation, Bi-level Positive Airway Pressure (BiPAP), Continuous Positive Airway Pressure (CPAP), Endotracheal Intubation, Invasive Ventilation, Mechanical Respiratory Assistance, Mechanical Ventilation, Non-Invasive Ventilation, Positive Pressure Ventilation, Respiratory Support, Ventilated Patient, Ventilator Settings, Ventilator Support, Ventilator Weaning, Ventilator-Associated Pneumonia (VAP) Prevention, Ventilator-Dependent
+
+Category: New Tracheostomy
+Keywords: Early Trach Tube Management, Immediate Post-Op Tracheostomy, Initial Stoma Assessment, Initial Trach Care, New Tracheostomy Care Protocol, Percutaneous Tracheotomy, Postoperative Tracheostomy Management, Surgical Tracheotomy, Tracheal Incision Care, Tracheostomy Placement, Tracheostomy Tube Insertion
+
+
+
+
+
+  **yellow_flags**
+
+  Look for any of the following in the patient file. If any are found, list them out as yellow flags. 
+  If there are medications not on the common medication list, write "unknown medication" as a yellow flag.
+
+  Category: Cancer Medications
+Keywords: 5-Fluorouracil, Bevacizumab, Bortezomib, Capecitabine, Carboplatin, Cisplatin, Cyclophosphamide, Doxorubicin, Erlotinib, Gefitinib, Gemcitabine, Imatinib, Methotrexate, Paclitaxel, Rituximab, Sorafenib, Sunitinib, Tamoxifen, Trastuzumab, Vincristine
+
+Category: Psychotropic meds
+Keywords: ADHD Medications, Anticonvulsants (as mood stabilizers), Antidepressants, Antimanic Agents, Antipsychotics, Anxiolytics, Atypical Antipsychotics, Benzodiazepines, Lithium, MAOIs, Mood Stabilizers, Psychoactive Medications, Psychotropic Meds, SNRIs, SSRIs, Sedative-Hypnotics, Stimulants, Tricyclic Antidepressants
+
+Category: HIV Medications
+Keywords: Abacavir, Atazanavir, Darunavir, Dolutegravir, Efavirenz, Elvitegravir, Emtricitabine, Enfuvirtide, Lamivudine, Lopinavir, Maraviroc, Nevirapine, Raltegravir, Ritonavir, Tenofovir, Zidovudine
+
+Category: Wounds
+Keywords: Abrasion, Abscess, Burn, Contusion, Gangrene, Incision Site, Laceration, Necrosis, Non-Adherence to Wound Treatment, Patient Declined Wound Care, Pressure Sore, Puncture Wound, Refusal of Wound Care, Self-Neglect of Wounds, Skin Tear, Surgical Wound, Traumatic Wound, Ulcer, Wound Infection, Wounds
+
+Category: Behavioral
+Keywords: Aggression, Agitated Behavior, Anger Outbursts, Anxiety, Behavioral Issues, Cognitive Impairment, Delusions, Dementia with behavioral disturbances or behaviors, Depression, Disruptive Behavior, Emotional Lability, Hallucinations, Impulsivity, Mood Swings, Non-Compliance, Psychiatric Evaluation Required, Secured unit, Self-Harm, Social Withdrawal, Suicidal Ideation
+
+Category: Combativeness
+Keywords: Aggressive Behavior, Agitation, Behavioral Management, Combativeness, Non-Compliance with Staff, Physical Aggression, Physical Altercation, Physical Restraints, Security Intervention, Sedation Required, Use of Restraints, Violent Behavior, mittens, mitts, sitter
+
+Category: Existing Tracheostomy
+Keywords: Airway Humidification for Trach, Chronic Tracheostomy Management, Decannulation Preparation, Established Tracheostomy Follow-up, Long-Term Trach Care, Securing Long-Term Trach Tube, Stoma Cleaning, Trach Tube Replacement, Tracheostomy Dressing Changes, Tracheostomy Maintenance, Tracheostomy Suctioning Routine, Tracheostomy Weaning Process
+
+Category: Weight Bearing
+Keywords: Ambulation Limitations, Assistive Device Required, Crutch Walking, Full Weight Bearing, Gait Abnormalities, Limb Loading Limitations, Load Bearing Limitation, Mobility Restrictions, Non-Weight Bearing, Orthopedic Restrictions, Partial Weight Bearing, Post-Surgical Weight Bearing, Restricted Weight Bearing, Toe-Touch Weight Bearing, Walker Use, Weight Bearing As Tolerated, Weight Bearing Precaution
+
+Category: Drug User
+Keywords: Amphetamine, Drug-seeking Behavior, HIV/AIDS, Hepatitis C, History of Substance Abuse, Methamphetamine, Multiple ER Visits, Non-Compliance with Prescribed Regimen, Overdose, Positive Urine Drug Screen, Seeking Prescriptions, Substance Abuse, Toxicology Screen, Withdrawal Symptoms
+
+Category: Ventilator
+Keywords: Assisted Ventilation, Bi-level Positive Airway Pressure (BiPAP), Continuous Positive Airway Pressure (CPAP), Endotracheal Intubation, Invasive Ventilation, Mechanical Respiratory Assistance, Mechanical Ventilation, Non-Invasive Ventilation, Positive Pressure Ventilation, Respiratory Support, Ventilated Patient, Ventilator Settings, Ventilator Support, Ventilator Weaning, Ventilator-Associated Pneumonia (VAP) Prevention, Ventilator-Dependent
+
+Category: BMI
+Keywords: BMI below 18 or above 30, Bariatric, Weight over 136 kg, Weight over 300 lbs
+
+Category: Methadone Medicatons
+Keywords: Buprenorphine, Levo-alpha-acetylmethadol (LAAM), Methadone, Naloxone, Naltrexone, Suboxone, Subutex
+
+Category: TPM
+Keywords: Central Line Nutrition, Central Venous Nutrition, Hyperalimentation, IV Hydration and Nutrition, IV Nutrition, Intravenous Feeding, Nutrient Infusion, Nutritional Support, PPN, Parenteral Feeding, Parenteral Nutrition Therapy, Peripheral Parenteral Nutrition, TPN, Total Parenteral Nutrition, Venous Feeding
+
+Category: New Tracheostomy
+Keywords: Early Trach Tube Management, Immediate Post-Op Tracheostomy, Initial Stoma Assessment, Initial Trach Care, New Tracheostomy Care Protocol, Percutaneous Tracheotomy, Postoperative Tracheostomy Management, Surgical Tracheotomy, Tracheal Incision Care, Tracheostomy Placement, Tracheostomy Tube Insertion
+
+Category: Homeless
+Keywords: Homeless, Homelessness, Housing Insecurity, Housing Instability, Lack of Permanent Residence, No Fixed Address, Shelter Resident, Street Dwelling, Temporary Accommodation, Transient Lifestyle, Unsheltered, Unstable Housing
+
+Category: IV Meds
+Keywords: IV Antibiotics, IV Anticoagulants, IV Chemotherapy, IV Fluids, IV Infusion, IV Medications, IV Pain Medication, IV Sedation, Intravenous Drugs, Intravenous Hydration, Intravenous Therapy, Parenteral Administration
+
+Category: Atrilogy
+Keywords: No keywords provided
+
+Category: Special Equipmen
+Keywords: Oxygen over 10 liters (L)
+
+
+
+  **uncommon_medications** 
+
+  Determine whether all the medication on the patient file appear on the common list of medications below. If the patient file contains a medication that is not on the common medication list, list the medication name and dose as an uncommon medication.
+
+  Common medications:
+
+  3M CUROS, ABRYSVO, ACETIC ACID, ACYCLOVIR, ADMELOG SOLO, ADVAIR DISKU, ADVAIR HFA, AIMOVIG, ALBUTEROL, ALENDRONATE, ALLOPURINOL, ALOGLIPTIN, ALPHA LIPOIC, ALPRAZOLAM, AMANTADINE, AMIODARONE, AMITRIPTYLIN, AMLOD/BENAZP, AMLODIPINE, AMOX/K CLAV, AMOXICILLIN, AMPICILLIN, ANASTROZOLE, ANORO ELLIPT, APAP/CODEINE, APLISOL, AREXVY, ARFORMOTEROL, ARIPIPRAZOLE, ARMOUR THYRO, ATENOLOL, ATORVASTATIN, ATROPINE SUL, ATROVENT HFA, AUTOSHIELD, AZELASTINE, AZITHROMYCIN, BACLOFEN, BASAGLAR, BENAZEPRIL, BENZONATATE, BENZTROPINE, BETAMETH DIP, BETHANECHOL, BEVESPI, BIMATOPROST, BIO-PATCH, BREO ELLIPTA, BREZTRI AERO, BRILINTA, BRIMO/TIMOLO, BRIMONIDINE, BUDES/FORMOT, BUDESONIDE, BUFF CAP IV, BUMETANIDE, BUPROPION, BUPROPN HCL, BUSPIRONE, BYDUREON BC, CALC ACETATE, CALCITRIOL, CARB/LEVO, CARB/LEVO ER, CARBAMAZEPIN, CARVEDILOL, CATHFLO ACTI, CEFADROXIL, CEFAZOLIN, CEFDINIR, CEFPODOXIME, CEFTRIAXONE, CEFUROXIME, CELECOXIB, CEPHALEXIN, CHLORHEX GLU, CHLORTHALID, CHOLESTYRAM, CILOSTAZOL, CINACALCET, CIPRO/DEXA, CIPROFLOXACN, CITALOPRAM, CLARITHROMYC, CLINDAMYCIN, CLOBETASOL, CLONAZEPAM, CLONIDINE, CLOPIDOGREL, CLOTRIM/BETA, CLOTRIMAZOLE, COLCHICINE, COMBIGAN, COMBIVENT, CYANOCOBALAM, CYCLOBENZAPR, CYCLOPHOSPH, CYCLOSPORINE, D5W/NACL, DANTROLENE, DAYVIGO, DESMOPRESSIN, DESONIDE, DESVENLAFAX, DEXAMETHASON, DEXILANT, DEXTROAMPHET, DIAZEPAM, DICLOFENAC, DICYCLOMINE, DIGOXIN, DILT-XR, DILTIAZEM, DIPHEN/ATROP, DIVALPROEX, DONEPEZIL, DORZOL/TIMOL, DORZOLAMIDE, DOXAZOSIN, DOXYCYC MONO, DOXYCYCL HYC, DULERA, DULOXETINE, DUPIXENT, DUTASTERIDE, ELETRIPTAN, ELIQUIS, ENALAPRIL, ENGERIX-B, ENOXAPARIN, ENTRESTO, EPINEPHRINE, ERYTHROMYCIN, ESCITALOPRAM, ESOMEPRA MAG, ESTRADIOL, EZETIMIBE, FAMOTIDINE, FARXIGA, FENOFIBRATE, FENTANYL, FESOTERODINE, FEXOFENADINE, FINASTERIDE, FINGOLIMOD, FLECAINIDE, FLUCONAZOLE, FLUDROCORT, FLUOCINONIDE, FLUOROMETHOL, FLUOXETINE, FLUTIC/SALME, FLUTIC/VILAN, FLUTICASONE, FOLIC ACID, FOSRENOL, FUROSEMIDE, GABAPENTIN, GALANTAMINE, GEMFIBROZIL, GEMTESA, GLARGIN YFGN, GLATIRAMER, GLATOPA, GLIMEPIRIDE, GLIPIZIDE, GLUCAGEN, GLYBURIDE, GVOKE HYPO, HALOPER DEC, HALOPER LAC, HALOPERIDOL, HEPARIN, HUMALOG, HUMALOG KWIK, HUMIRA PEN, HUMULIN R, HYDRALAZINE, HYDROCHLOROT, HYDROCO/APAP, HYDROCORT, HYDROMORPHON, HYDROXYCHLOR, HYDROXYUREA, HYDROXYZ HCL, HYDROXYZ PAM, HYDROcodone-acetaminophen (NORCO), HYOSCYAMINE, IBUPROFEN, IMATINIB MES, IMIQUIMOD, INCRUSE ELPT, INDOMETHACIN, INGREZZA, INS ASP PROT, INS DEGL FLX, INSULIN ASPA, INSULIN GLAR, INSULIN LISP, INVEGA SUST, IPRATROPIUM, IPRATROPIUM/, ISOSORB DIN, ISOSORB MONO, IV-AVYCAZ, IV-CEFAZOLIN, IV-CEFTRIAXONE, IV-DAPTOMYCIN, IV-ERTAPENEM, IV-MEROPENEM, IV-PENICILLIN, JANUMET, JANUVIA, JARDIANCE, KAPSPARGO, KETOCONAZOLE, KETOROLAC, LABETALOL, LACOSAMIDE, LACTULOSE, LAGEVRIO, LAMOTRIGINE, LANSOPRAZOLE, LANTHANUM, LANTUS, LANTUS SOLOS, LATANOPROST, LEFLUNOMIDE, LETROZOLE, LEVEMIR, LEVETIRACETA, LEVOFLOXACIN, LEVOTHYROXIN, LIDO/PRILOCN, LIDOCAINE, LINEZOLID, LINZESS, LISINOP/HCTZ, LISINOPRIL, LITHIUM CARB, LOKELMA, LOPERAMIDE, LORAZEPAM, LOSARTAN POT, LOSARTAN/HCT, LOVASTATIN, LUBIPROSTONE, LURASIDONE, LYBALVI, MECLIZINE, MEGESTROL AC, MELOXICAM, MEMANTINE, METHENAM HIP, METHIMAZOLE, METHOCARBAM, METHOTREXATE, METHYLPHENID, METOCLOPRAM, METOLAZONE, METOPROL SUC, METOPROL TAR, METRONIDAZOL, MIDODRINE, MINOXIDIL, MIRTAZAPINE, MONTELUKAST, MORPHINE SUL, MOTEGRITY, MOUNJARO, MOXIFLOXACIN, MUPIROCIN, MYRBETRIQ, NAFTIFINE, NALOXONE, NALTREXONE, NAPROXEN, NEBIVOLOL, NEO/POLY/DEX, NEO/POLY/HC, NIFEDIPINE, NITROFUR MAC, NITROFURANTN, NITROGLYCER, NITROGLYCERin, NITROSTAT, NORML SALINE, NORTRIPTYLIN, NOVOLIN, NOVOLIN N, NOVOLIN R, NOVOLOG, NUEDEXTA, NURTEC, NYAMYC, NYSTAT/TRIAM, NYSTATIN, OFLOXACIN, OLANZAPINE, OMEPRAZOLE, ONDANSETRON, ONGLYZA, ORPHENADRINE, OSELTAMIVIR, OXYBUTYNIN, OXYCOD/APAP, OXYCODONE, OXYCONTIN, OZEMPIC, PANTOPRAZOLE, PAROXETINE, PAXLOVID, PEG-3350, PHENAZOPYRID, PILOCARPINE, PIMECROLIMUS, PIOGLITAZONE, POT CHLORIDE, POT CL MICRO, PRADAXA, PRAMIPEXOLE, PRAVASTATIN, PRAZOSIN HCL, PREDNISOLONE, PREDNISONE, PREGABALIN, PREMARIN VAG CRE, PREVNAR 20, PRIMIDONE, PROAIR RESPI, PROCHLORPER, PROMETHAZINE, PROPRANOLOL, PULMICORT, QUETIAPINE, RAMELTEON, RAMIPRIL, RANOLAZINE, RENA-VITE, REPATHA PUSH, RHOPRESSA, RISPERIDONE, ROSUVASTATIN, RXDESTROYER ALL PURPOSE, RYBELSUS, SCOPOLAMINE, SERTRALINE, SEVELAMER, SHINGRIX, SIMVASTATIN, SMZ-TMP DS, SOD CHLORIDE, SODIUM BICAR, SODIUM CHLOR SOL, SOLIFENACIN, SPIKEVAX, SPIRIVA, SPIRONOLACT, SSD, STERILE INJ WATER, STIOLTO, SUCRALFATE, SUMATRIPTAN, SUTAB, SYSTANE PF, TACROLIMUS, TADALAFIL, TAMSULOSIN, TERAZOSIN, TERBINAFINE, TIMOLOL MAL, TIOTROP BROM, TIZANIDINE, TOBRADEX, TOLTERODINE, TOPIRAMATE, TORSEMIDE, TRAMADOL HCL, TRAZODONE, TRELEGY, TRESIBA, TRESIBA FLEX, TRIAMCINOLONE, TRINTELLIX, TROSPIUM CL, TRULICITY, UBRELVY, URE-NA, VALACYCLOVIR, VALPROIC ACD, VALSART/HCTZ, VALSARTAN, VANCOMYCIN, VENLAFAXINE, VENTOLIN HFA, VERAPAMIL, VICTOZA, VILAZODONE, VITAMIN D, VITAMIN D3, VRAYLAR, WARFARIN, XARELTO, XIFAXAN, XULTOPHY, YUPELRI, ZENPEP, ZIPRASIDONE, ZOLPIDEM, ZONISAMIDE, allopurinol, aspirin, atorvastatin (LIPITOR), carbidopa-levodopa, ferrous sulfate, ibuprofen (ADVIL,MOTRIN), metroNIDAZOLE, pantoprazole (PROTONIX)
+
+
+  **rag_status**
+
+  If any red flags are found, print RED
+
+  If any yellow flags are found OR there are any medications on the patient file that are not on the common medication list, print YELLOW. If there are medications not on the common medication list, write "unknown medication" as a yellow flag.
+
+  If there are no red flags or yellow flags AND all medications on the patient file are on the common medication list, print GREEN. 
+
+
+  The rest of the fields should be available in the patient file or from the above prompt. Find each field using the fields and definitions below. If a field is not found, return a null value. 
+
+  | Field Group                        | Display Name            | Field Name               | Definition                                                |
+  |------------------------------------|-------------------------|--------------------------|-----------------------------------------------------------|
+  | Patient                            | Last Name               | last_name                | Last name of the patient                                  |
+  | Patient                            | First Name              | first_name               | First name of the patient                                 |
+  | Patient                            | Location                | location                 | Patient's current hospital                                |
+  | Patient                            | Gender                  | gender                   | Patient's gender                                          |
+  | Patient                            | SSN                     | ssn                      | Patient's social security number                          |
+  | Patient                            | DOB                     | dob                      | Patient's date of birth                                   |
+  | Patient                            | Age                     | age                      | Patient's age                                             |
+  | Patient                            | Height                  | height                   | Patient's height                                          |
+  | Patient                            | Weight                  | weight                   | Patient's weight                                          |
+  | Patient                            | Address                 | address                  | Patient's address                                         |
+  | Patient                            | Phone Number            | phone                    | Patient's phone number                                    |
+  | Patient                            | Psychiatric Status      | psychiatric_status       | Patient's psychiatric status                              |
+  | Patient                            | Special Equipment       | special_equipment        | Special equipment needed by the patient                   |
+  | Patient                            | MRN                     | mrn                      | Medical Record Number                                     |
+  | Patient                            | Code Status             | code_status              | Full or DNR (Do-Not-Resuscitate)                           |
+  | Patient                            | Race                    | race                     | Patient's race                                            |
+  | Patient                            | Summary                 | summary                  | AI-provided summary of the patient's condition            |
+  | Patient                            | Specialized Equipment   | specialized_equipment    | Any special equipment needed by the patient               |
+  | Patient                            | Psychiatric Diagnosis   | psychiatric_diagnosis    | Summary of the patient's current psychiatric status       |
+  | Patient                            | Diet                    | diet                     | Any special diet noted in the patient file                |
+  | Patient                            | Case Manager Name       | case_manager_name        | The name of the case manager                              |
+  | Patient                            | Case Manager Phone      | case_manager_phone       | The phone number of the case manager                      |
+  | Patient                            | Hospital Admit Date     | hospital_admit_date      | The date the patient was admitted to the hospital         |
+  | Emergency Contact                  | Name                    | full_name                | Emergency contact's full name                             |
+  | Emergency Contact                  | Phone Number            | phone                    | Emergency contact's phone number                          |
+  | Emergency Contact                  | Address                 | address                  | Emergency contact's address                               |
+  | Emergency Contact                  | Relationship            | relationship             | Emergency contact's relationship to the patient           |
+  | Insurance - Primary Insurance      | Type                    | insurance_type           | Patient's primary insurance type                          |
+  | Insurance - Primary Insurance      | ID #                    | insurance_id             | Patient's primary insurance ID number                     |
+  | Insurance - Primary Insurance      | Verification/Ref #      | insurance_verification   | Primary insurance verification reference number           |
+  | Insurance - Secondary Insurance    | Type                    | insurance_type           | Patient's secondary insurance type                        |
+  | Insurance - Secondary Insurance    | ID #                    | insurance_id             | Patient's secondary insurance ID number                   |
+  | Insurance - Secondary Insurance    | Verification/Ref #      | insurance_verification   | Secondary insurance verification reference number         |
+
+
+
+
+
+  Please note the following:
+  - For missing information, just put null.
+  - Only return JSON text, and no other comments, in the final reply, because I want to 
+  do `json.loads(...)` on your reply message text.
+  - If there's any comments or concerns from your side, put them in the `GPT_COMMENT` field.
+  - Use the fields verbatim
+
+  Here is an example of a final reply from you after I include the keyword 'PATIENT_RECORD_COMPLETE' (again, remember to only reply with the JSON text):
+  ```
+  {
+      "diagnosis_summary": "",
+      "special_equipment": "",
+      "psychiatric_status": "",
+      "insurance": {
+          "primary": {
+              "type": "",
+              "id": "",
+              "verification_ref": ""
+          },
+          "secondary": {
+              "type": "",
+              "id": "",
+              "verification_ref": ""
+          }
+      },
+      "red_flags": [],
+      "yellow_flags": [],
+      "uncommon_medications": [
+          {
+              "medication_name": "",
+              "dose": ""
+          }
+      ],
+      "rag_status": "",
+      "facesheet_data": {
+          "patient": {
+              "last_name": "",
+              "first_name": "",
+              "location": "",
+              "gender": "",
+              "ssn": "",
+              "dob": "",
+              "age": "",
+              "height": "",
+              "weight": "",
+              "address": "",
+              "phone": "",
+              "psychiatric_status": "",
+              "special_equipment": "",
+              "mrn": "",
+              "code_status": "",
+              "race": "",
+              "summary": "",
+              "specialized_equipment": "",
+              "psychiatric_diagnosis": "",
+              "diet": "",
+              "case_manager_name": "",
+              "case_manager_phone": "",
+              "hospital_admit_date": ""
+          },
+          "emergency_contact": {
+              "name": "",
+              "phone": "",
+              "address": "",
+              "relationship": ""
+          }
+      }
+  }
+  ```
+  
