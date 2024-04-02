@@ -8,7 +8,8 @@ import urllib.request
 CREDAL_API_KEY = os.environ["CREDAL_API_KEY"]
 CREDAL_API_EMAIL = os.environ["CREDAL_API_EMAIL"]
 
-OUTPUT_BUCKET_NAME = "admission-copilot-facesheets"
+INPUT_BUCKET_NAME = "<input-bucket-name>"
+OUTPUT_BUCKET_NAME = "<output-bucket-name>"
 # Not specifying a prefix. For now, paste everything in the root directory
 # of the bucket.
 
@@ -19,7 +20,7 @@ def chunk_string(input_string, chunk_size) -> list[str]:
 
 def read_ai_prompt_from_bucket() -> str:
     s3 = boto3.client('s3')
-    response = s3.get_object(Bucket="admission-copilot-input-pdfs", Key="ai_prompts/ai_prompt.txt")
+    response = s3.get_object(Bucket=INPUT_BUCKET_NAME, Key="ai_prompts/ai_prompt.txt")
     return response["Body"].read().decode("utf-8")
 
 
