@@ -99,7 +99,7 @@ def extract_patient_data_using_credal_single_chunk(patient_record_text: str) -> 
 
 
 def extract_patient_data_using_credal(patient_record_text: str) -> dict:
-    ai_prompt = open("ai_prompt.md", "r", encoding="utf-8").read()
+    ai_prompt = read_ai_prompt_from_bucket()
 
     chunk_size = 70000
     print("Length of patient record", len(patient_record_text))
